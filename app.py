@@ -9,16 +9,16 @@ app.secret_key = 'clave_super_secreta_chili'  # Necesario para el carrito
 
 # DATOS: Base de datos de productos
 dulces = [
-    {"id": 1, "nombre": "Trolli Sour Brite Crawlers", "precio": 60.00, "img": "/static/trolli.jpeg"},
-    {"id": 2, "nombre": "Toxic Waste Red Sour Candy", "precio": 45.00, "img": "/static/toxicwaste.jpeg"},
-    {"id": 3, "nombre": "Twizzlers STRAWBERRY", "precio": 85.00, "img": "/static/twizzlers.jpeg"},
-    {"id": 4, "nombre": "Feastables Milk Crunch", "precio": 100.00, "img": "/static/feastables.jpeg"},
-    {"id": 5, "nombre": "Prime Sabor Frambuesa", "precio": 60.00, "img": "/static/primef.jpeg"},
-    {"id": 6, "nombre": "Prime Sabor ICE", "precio": 65.00, "img": "/static/primeice.jpeg"},
-    {"id": 7, "nombre": "Pringles Múltiples Sabores", "precio": 95.00, "img": "/static/prin.jpeg"},
-    {"id": 8, "nombre": "Peeps Múltiples Sabores", "precio": 145.00, "img": "/static/peeps.jpeg"},
-    {"id": 9, "nombre": "Tropical Marshmallow", "precio": 40.00, "img": "/static/tropical.jpeg"},
-    {"id": 10, "nombre": "Domes Sabor", "precio": 40.00, "img": "/static/domes.jpeg"}
+    {"id": 1, "nombre": "Trolli Sour Brite Crawlers", "precio": 150.00, "img": "/static/trolli.jpeg"},
+    {"id": 2, "nombre": "Toxic Waste Red Sour Candy", "precio": 145.00, "img": "/static/toxicwaste.jpeg"},
+    {"id": 3, "nombre": "Twizzlers STRAWBERRY", "precio": 185.00, "img": "/static/twizzlers.jpeg"},
+    {"id": 4, "nombre": "Feastables Milk Crunch", "precio": 190.00, "img": "/static/feastables.jpeg"},
+    {"id": 5, "nombre": "Prime Sabor Frambuesa", "precio": 210.00, "img": "/static/primef.jpeg"},
+    {"id": 6, "nombre": "Prime Sabor ICE", "precio": 165.00, "img": "/static/primeice.jpeg"},
+    {"id": 7, "nombre": "Pringles Múltiples Sabores", "precio": 200.00, "img": "/static/prin.jpeg"},
+    {"id": 8, "nombre": "Peeps Múltiples Sabores", "precio": 199.00, "img": "/static/peeps.jpeg"},
+    {"id": 9, "nombre": "Tropical Marshmallow", "precio": 450.00, "img": "/static/tropical.jpeg"},
+    {"id": 10, "nombre": "Domes Sabor", "precio": 250.00, "img": "/static/domes.jpeg"}
 ]
 
 # CONFIGURACIÓN: Tu Instagram para los pedidos
