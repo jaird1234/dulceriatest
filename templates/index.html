@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chili delimex | Dulces Importados</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #e63946; /* Rojo Chili */
+            --dark: #1d3557;    /* Azul oscuro serio */
+            --light: #f1faee;   /* Blanco hueso */
+            --accent: #457b9d;  /* Azul medio */
+            --gray: #6c757d;
+        }
+        body { font-family: 'Poppins', sans-serif; margin: 0; padding: 0; background-color: #f8f9fa; color: #333; }
+        
+        /* Navbar */
+        nav { background: white; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
+        .logo { font-size: 1.5rem; font-weight: 700; color: var(--primary); text-decoration: none; }
+        .cart-icon { position: relative; color: var(--dark); text-decoration: none; font-weight: 600; }
+        .badge { background: var(--primary); color: white; border-radius: 50%; padding: 2px 8px; font-size: 0.8rem; position: absolute; top: -10px; right: -15px; }
+
+        /* Hero Section */
+        .hero { background: var(--dark); color: white; text-align: center; padding: 60px 20px; }
+        .hero h1 { margin: 0; font-size: 2.5rem; }
+        .hero p { color: #a8dadc; margin-top: 10px; font-size: 1.1rem; }
+
+        /* Grid de Productos */
+        .container { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 30px; }
+        
+        /* Tarjetas de Producto */
+        .card { background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); transition: transform 0.3s ease; border: 1px solid #eee; }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+        .card img { width: 100%; height: 220px; object-fit: cover; border-bottom: 1px solid #eee; }
+        .info { padding: 20px; }
+        .info h3 { margin: 0 0 10px 0; font-size: 1rem; color: var(--dark); height: 50px; overflow: hidden; }
+        .price { font-size: 1.2rem; font-weight: 700; color: var(--primary); display: block; margin-bottom: 15px; }
+        
+        .btn-add { display: block; width: 100%; text-align: center; background: var(--dark); color: white; padding: 10px 0; border-radius: 4px; text-decoration: none; font-size: 0.9rem; transition: background 0.3s; }
+        .btn-add:hover { background: var(--accent); }
+
+        /* Footer */
+        footer { background: #333; color: #fff; text-align: center; padding: 40px 20px; margin-top: 60px; font-size: 0.9rem; }
+        .footer-link { color: var(--primary); text-decoration: none; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="/" class="logo">Chili delimex 🌶️</a>
+        <a href="/carrito" class="cart-icon">
+            Ver Carrito 🛒
+            {% if cantidad_carrito > 0 %}
+            <span class="badge">{{ cantidad_carrito }}</span>
+            {% endif %}
+        </a>
+    </nav>
+
+    <div class="hero">
+        <h1>Los mejores dulces importados</h1>
+        <p>Envíos a todo México 🇲🇽 | Gratis desde $200 MXN</p>
+    </div>
+
+    <div class="container">
+        <h2 style="color: var(--dark); margin-bottom: 30px;">Catálogo Reciente</h2>
+        <div class="grid">
+            {% for dulce in productos %}
+            <div class="card">
+                <img src="{{ dulce.img }}" alt="{{ dulce.nombre }}">
+                <div class="info">
+                    <h3>{{ dulce.nombre }}</h3>
+                    <span class="price">${{ dulce.precio }} MXN</span>
+                    <a href="/agregar/{{ dulce.id }}" class="btn-add">Agregar al Carrito</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Chili delimex. Todos los derechos reservados.</p>
+        <p>Síguenos en <a href="#" class="footer-link">Instagram</a></p>
+    </footer>
+
+</body>
+</html>
